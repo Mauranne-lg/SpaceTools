@@ -1,0 +1,108 @@
+#shop {
+  display: grid;
+  width: 100%;
+  grid-template-areas:
+    "intro panier"
+    "picture panier"
+    "articles panier";
+  grid-template-columns: 1fr 350px;
+  grid-template-rows: 100px 1fr 500px;
+}
+
+#shop > .intro {
+  grid-area: intro;
+  color: white;
+}
+
+#shop > .picture {
+  grid-area: picture;
+  height: 500px;
+}
+
+#shop > .articles-container {
+  grid-area: articles;
+}
+
+#shop > app-panier {
+  grid-area: panier;
+}
+
+.intro {
+  text-align: center;
+}
+
+.picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 52rem;
+}
+.articles-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.articles-container {
+  display: grid;
+  width: 60%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  padding: 0;
+  grid-gap: 20px;
+  margin-bottom: 50px;
+}
+
+.card {
+  color: white;
+  background-color: #202020;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all 200ms ease-in-out;
+  border-left: 0px solid #1fd662;
+  width: 14rem;
+  height: 18rem;
+}
+
+.card:hover {
+  border-left: 7px solid #1fd662;
+}
+
+.card-img-top {
+  width: 100px;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1fd662;
+}
+
+.btn {
+  background-color: #1fd662;
+  border: none;
+  margin: 2%;
+}
+
+.btn:hover {
+  color: black;
+}
+
+@media screen and (max-with: 321px) {
+  #shop {
+    display: grid;
+    grid-template-areas:
+      "intro"
+      "picture"
+      "articles"
+      "panier";
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr 500px 500px;
+  }
+}

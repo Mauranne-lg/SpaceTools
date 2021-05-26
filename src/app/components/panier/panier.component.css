@@ -1,0 +1,22 @@
+* {
+  color: white;
+  text-align: center;
+}
+.btn {
+  background-color: #1fd662;
+  border: none;
+}
+
+.delete {
+  background-color: lightcoral;
+}
+
+.btn:hover {
+  color: black;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
